@@ -1,13 +1,13 @@
-package com.kindsonthegenius.fleetmsv;
+package com.kindsonthegenius.fleetms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FleetmsvApplication {
+public class FleetmsApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(FleetmsvApplication.class, args);
+        SpringApplication.run(FleetmsApplication.class, args);
     }
 }
