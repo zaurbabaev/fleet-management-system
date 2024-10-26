@@ -9,12 +9,12 @@
     <section class="wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header"><i class="fa-solid fa-list"></i><b style="color: #092f3d">COUNTRIES</b>
+                <h3 class="page-header"><i class="fa-solid fa-list"></i><b style="color: #092f3d">LOCATIONS</b>
                 </h3>
                 <ol class="breadcrumb">
                     <li><i class="fa fa-home"></i><a href="/index">Home</a></li>
                     <li><i class="fa fa-bars"></i><a href="/parameters">Parameters</a></li>
-                    <li><i class="fa fa-square"></i>Countries</li>
+                    <li><i class="fa fa-square"></i>Locations</li>
                 </ol>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <div class="col-lg-12">
                 <section class="panel">
                     <div class="panel-body">
-                        <a href="countries/add" class="btn btn-primary">New Country</a>
+                        <a href="/parameters/locations/add" class="btn btn-primary">New Location</a>
                     </div>
                 </section>
                 <section class="panel">
@@ -33,26 +33,32 @@
                         <tbody>
                         <tr>
                             <th><i class="icon_profile"></i> Description</th>
-                            <th><i class="icon_calendar"></i> Capital</th>
-                            <th><i class="icon_mail_alt"></i> Code</th>
-                            <th><i class="icon_pin_alt"></i> Nationality</th>
-                            <th><i class="icon_mobile"></i> Continent</th>
+                            <th><i class="fa-solid fa-city"></i> City</th>
+                            <th><i class="icon_mail_alt"></i> Address</th>
+                            <th><i class="icon_pin_alt"></i> Country</th>
+                            <th><i class="icon_mobile"></i> State</th>
+                            <th><i class="icon_mobile"></i> Details</th>
                             <th><i class="icon_cogs"></i> Action</th>
                         </tr>
                         <tr>
-                        <tr th:each="country : ${countries}">
-                            <td th:text="${country.description}"></td>
-                            <td th:text="${country.capital}"></td>
-                            <td th:text="${country.code}"></td>
-                            <td th:text="${country.nationality}"></td>
-                            <td th:text="${country.continent}"></td>
+                        <tr th:each="location : ${locations}">
+                            <td th:text="${location.description}"></td>
+                            <td th:text="${location.city}"></td>
+                            <td th:text="${location.address}"></td>
+                            <td th:text="${location.country}"></td>
+                            <td th:text="${location.state}"></td>
+                            <td th:text="${location.details}"></td>
                             <td>
                                 <div class="btn-group">
-                                    <a class="btn btn-primary" th:href="@{/parameters/countries/Details/{id} (id=${country.id})}"><i
+                                    <a class="btn btn-primary"
+                                       th:href="@{/parameters/locations/Details/{id} (id=${location.id})}"><i
                                             class="icon_plus_alt2"></i></a>
-                                    <a class="btn btn-success" th:href="@{/parameters/countries/Edit/{id} (id=${country.id})}"><i
+                                    <a class="btn btn-success"
+                                       th:href="@{/parameters/locations/Edit/{id} (id=${location.id})}"><i
                                             class="icon_check_alt2"></i></a>
-                                    <a class="btn btn-danger" onclick="return confirm('Are you sure want to delete this record?')" th:href="@{/parameters/countries/delete/{id} (id=${country.id})}"><i
+                                    <a class="btn btn-danger"
+                                       onclick="return confirm('Are you sure want to delete this record?')"
+                                       th:href="@{/parameters/locations/delete/{id} (id=${location.id})}"><i
                                             class="icon_close_alt2"></i></a>
                                 </div>
                             </td>
