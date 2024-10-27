@@ -29,7 +29,7 @@
                             </header>
                             <div class="panel-body">
 
-<!--                                <input th:field="*{id}" type="hidden" class="form-control">-->
+                                <!--                                <input th:field="*{id}" type="hidden" class="form-control">-->
 
                                 <div class="form-group">
                                     <label class="control-label col-sm-4" for="country">Country</label>
@@ -54,7 +54,8 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-4" for="capital">Capital</label>
                                     <div class="col-sm-6">
-                                        <input id="capital" th:field="*{capital}" type="text" class="form-control" readonly>
+                                        <input id="capital" th:field="*{capital}" type="text" class="form-control"
+                                               readonly>
                                     </div>
                                 </div>
 
@@ -68,14 +69,15 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-4" for="details">Details</label>
                                     <div class="col-sm-6">
-                                        <input id="details" th:field="*{details}" type="text" class="form-control" readonly>
+                                        <input id="details" th:field="*{details}" type="text" class="form-control"
+                                               readonly>
                                     </div>
                                 </div>
                             </div>
                         </section>
                         <section class="panel">
                             <div class="panel-body">
-                                <button type="submit" disabled class="btn btn-success" >Save</button>
+                                <button type="submit" disabled class="btn btn-success">Save</button>
                                 <a href="/parameters/states" class="btn btn-warning">Exit</a>
                             </div>
                         </section>

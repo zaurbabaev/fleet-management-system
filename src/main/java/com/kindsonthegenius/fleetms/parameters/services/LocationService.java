@@ -31,7 +31,7 @@ public class LocationService {
         locationRepository.deleteById(id);
     }
 
-    public List<Location> getByDescriptionContaining(String description){
+    public List<Location> getByDescriptionContaining(String description) {
         return locationRepository.findByDescriptionContaining(description);
     }
 

@@ -33,6 +33,7 @@ Options are provided as attributes 'data-option':
 The following options are supported :
 
 Behaviors :
+
 * min : min value | default=0.
 * max : max value | default=100.
 * angleOffset : starting angle in degrees | default=0.
@@ -41,6 +42,7 @@ Behaviors :
 * readOnly : disable input and events | default=false.
 
 UI :
+
 * cursor : display mode "cursor" | default=gauge.
 * thickness : gauge thickness.
 * width : dial width.
@@ -60,17 +62,17 @@ Hooks
 
 * 'release' : executed on release
 
-    Parameters :
+  Parameters :
     + value : int, current value
 
 * 'change' : executed at each change of the value
 
-    Parameters :
+  Parameters :
     + value : int, current value
 
 * 'draw' : when drawing the canvas
 
-    Context :
+  Context :
     - this.g : canvas context 2D (see Canvas documentation)
     - this.$ : jQuery wrapped element
     - this.o : options
@@ -91,7 +93,6 @@ Example
                      'change' : function (v) { console.log(v); }
                     });
     </script>
-
 
 Dynamically configure
 -------

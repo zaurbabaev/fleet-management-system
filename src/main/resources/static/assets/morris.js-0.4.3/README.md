@@ -26,7 +26,7 @@ Fork, hack, possibly even add some tests, then send a pull request :)
 
 ### Developer quick-start
 
-You'll need [node.js](https://nodejs.org).  I recommend using
+You'll need [node.js](https://nodejs.org). I recommend using
 [nvm](https://github.com/creationix/nvm) for installing node in
 development environments.
 
@@ -89,7 +89,8 @@ Once you're all set up, you can compile, minify and run the tests using `grunt`.
 ### 0.3.1 - 13th October 2012
 
 - Add `formatter` option for customising value labels in donuts [#75](https://github.com/oesmith/morris.js/issues/75).
-- Cycle `lineColors` on line charts to avoid running out of colours [#78](https://github.com/oesmith/morris.js/issues/78).
+- Cycle `lineColors` on line charts to avoid running out of
+  colours [#78](https://github.com/oesmith/morris.js/issues/78).
 - Add method to select donut segments. [#79](https://github.com/oesmith/morris.js/issues/79).
 - Don't go negative on yMin when all y values are zero. [#80](https://github.com/oesmith/morris.js/issues/80).
 - Don't sort data when parseTime is false [#83](https://github.com/oesmith/morris.js/issues/83).

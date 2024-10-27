@@ -2,14 +2,16 @@ easy pie chart
 ==============
 
 Easy pie chart is a jQuery plugin that uses the canvas element to render simple pie charts for single values.
-These charts are highly customizable, very easy to implement and **scale to the resolution of the display of the client to provide sharp charts even on retina displays**.
+These charts are highly customizable, very easy to implement and **scale to the resolution of the display of the client
+to provide sharp charts even on retina displays**.
 
 ![](https://github.com/rendro/easy-pie-chart/raw/master/img/easy-pie-chart.png)
 
 Get started
 -----------
 
-To use the easy pie chart plugin you need to load the current version of jQuery (testet with 1.7.2) and the source (css+js) of the plugin.
+To use the easy pie chart plugin you need to load the current version of jQuery (testet with 1.7.2) and the source (
+css+js) of the plugin.
 Just add the following lines to the `head` of your website:
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -17,7 +19,8 @@ Just add the following lines to the `head` of your website:
 
     <link rel="stylesheet"type="text/css" href="/path/to/jquery.easy-pie-chart.css">
 
-The second step is to add a element to your site to represent chart and add the `data-percent` attribute with the percent number the pie chart should have:
+The second step is to add a element to your site to represent chart and add the `data-percent` attribute with the
+percent number the pie chart should have:
 
     <div class="chart" data-percent="73">73%</div>
 
@@ -93,7 +96,8 @@ You can pass a set of these options to the initialize function to set a custom b
 Public plugin methods
 ---------------------
 
-If you want to update the current percentage of the a pie chart, you can call the `update` method. The instance of the plugin is saved in the jQuery-data.
+If you want to update the current percentage of the a pie chart, you can call the `update` method. The instance of the
+plugin is saved in the jQuery-data.
 
     <script type="text/javascript">
     $(function() {
@@ -111,4 +115,6 @@ If you want to update the current percentage of the a pie chart, you can call th
 Credits
 -------
 
-Thanks to [Rafal Bromirski](http://www.paranoida.com/) for making [this dribble shot](http://drbl.in/ezuc) which inspired me and [Philip Thrasher](http://philipthrasher.com/) for his [CoffeeScript jQuery boilerplate](https://github.com/pthrasher/coffee-plate)
+Thanks to [Rafal Bromirski](http://www.paranoida.com/) for making [this dribble shot](http://drbl.in/ezuc) which
+inspired me and [Philip Thrasher](http://philipthrasher.com/) for
+his [CoffeeScript jQuery boilerplate](https://github.com/pthrasher/coffee-plate)

@@ -53,11 +53,11 @@ var Sliders = function () {
     });
     $("#slider-range-min-amount").text("$" + $("#slider-range-min").slider("value"));
 
-    
+
     // setup graphic EQ
-    $( "#eq > span" ).each(function() {    
-        var value = parseInt( $( this ).text(), 10 );
-        $( this ).empty().slider({
+    $("#eq > span").each(function () {
+        var value = parseInt($(this).text(), 10);
+        $(this).empty().slider({
             value: value,
             range: "min",
             animate: true,
@@ -66,18 +66,18 @@ var Sliders = function () {
     });
 
     // bound to select
-    var select = $( "#bound-to-select" );
-    var slider = $( "<div id='slider'></div>" ).insertAfter( select ).slider({
+    var select = $("#bound-to-select");
+    var slider = $("<div id='slider'></div>").insertAfter(select).slider({
         min: 1,
         max: 10,
         range: "min",
-        value: select[ 0 ].selectedIndex + 1,
-        slide: function( event, ui ) {
-            select[ 0 ].selectedIndex = ui.value - 1;
+        value: select[0].selectedIndex + 1,
+        slide: function (event, ui) {
+            select[0].selectedIndex = ui.value - 1;
         }
     });
-    $( "#bound-to-select" ).change(function() {
-        slider.slider( "value", this.selectedIndex + 1 );
+    $("#bound-to-select").change(function () {
+        slider.slider("value", this.selectedIndex + 1);
     });
 
     // vertical slider
@@ -88,10 +88,10 @@ var Sliders = function () {
         max: 100,
         value: 40,
         slide: function (event, ui) {
-            $("#slider-vertical-amount").text(ui.value+" cm");
+            $("#slider-vertical-amount").text(ui.value + " cm");
         }
     });
-    $("#slider-vertical-amount").text($("#slider-vertical").slider("value")+" cm");
+    $("#slider-vertical-amount").text($("#slider-vertical").slider("value") + " cm");
 
     // vertical range sliders
     $("#slider-range-vertical").slider({

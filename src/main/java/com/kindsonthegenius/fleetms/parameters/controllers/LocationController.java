@@ -43,7 +43,7 @@ public class LocationController {
     @GetMapping("/add")
     public String addLocation(Model model) {
         List<Country> countries = countryService.getAll();
-        model.addAttribute("countries",countries);
+        model.addAttribute("countries", countries);
         return "parameters/location/locationAdd";
     }
 

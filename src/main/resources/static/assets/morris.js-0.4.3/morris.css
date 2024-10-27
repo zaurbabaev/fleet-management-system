@@ -25,4 +25,6 @@
 }
 
 
-#hero-graph, #hero-bar, #hero-area, #hero-donut {height: 250px}
+#hero-graph, #hero-bar, #hero-area, #hero-donut {
+    height: 250px
+}

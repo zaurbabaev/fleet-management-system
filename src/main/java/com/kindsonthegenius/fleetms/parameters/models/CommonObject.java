@@ -15,8 +15,8 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @Getter
 @MappedSuperclass
-@FieldDefaults(level= AccessLevel.PRIVATE)
-@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property = "id")
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class CommonObject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

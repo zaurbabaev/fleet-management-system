@@ -2,7 +2,6 @@ package com.kindsonthegenius.fleetms.parameters.controllers;
 
 import com.kindsonthegenius.fleetms.parameters.models.Client;
 import com.kindsonthegenius.fleetms.parameters.models.Country;
-import com.kindsonthegenius.fleetms.parameters.models.State;
 import com.kindsonthegenius.fleetms.parameters.services.ClientService;
 import com.kindsonthegenius.fleetms.parameters.services.CountryService;
 import com.kindsonthegenius.fleetms.parameters.services.StateService;
@@ -56,13 +55,13 @@ public class ClientController {
     }
 
     @PostMapping
-    public String save(Client client){
+    public String save(Client client) {
         clientService.save(client);
         return "redirect:/parameters/clients";
     }
 
     @GetMapping("/delete/{id}")
-    public String delete(@PathVariable("id")Integer id){
+    public String delete(@PathVariable("id") Integer id) {
         clientService.delete(id);
         return "redirect:/parameters/clients";
     }

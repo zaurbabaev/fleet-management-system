@@ -51,11 +51,15 @@
                             <td th:text="${state.details}"></td>
                             <td>
                                 <div class="btn-group">
-                                    <a class="btn btn-primary" th:href="@{/parameters/states/Details/{id} (id=${state.id})}"><i
+                                    <a class="btn btn-primary"
+                                       th:href="@{/parameters/states/Details/{id} (id=${state.id})}"><i
                                             class="icon_plus_alt2"></i></a>
-                                    <a class="btn btn-success" th:href="@{/parameters/states/Edit/{id} (id=${state.id})}"><i
+                                    <a class="btn btn-success"
+                                       th:href="@{/parameters/states/Edit/{id} (id=${state.id})}"><i
                                             class="icon_check_alt2"></i></a>
-                                    <a class="btn btn-danger" onclick="return confirm('Are you sure want to delete this record?')" th:href="@{/parameters/states/delete/{id} (id=${state.id})}"><i
+                                    <a class="btn btn-danger"
+                                       onclick="return confirm('Are you sure want to delete this record?')"
+                                       th:href="@{/parameters/states/delete/{id} (id=${state.id})}"><i
                                             class="icon_close_alt2"></i></a>
                                 </div>
                             </td>
