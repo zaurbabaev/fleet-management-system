@@ -44,7 +44,7 @@ public class StateController {
 
     @PostMapping
     public String save(State state) {
-        stateService.save(state);
+        stateService.saveEmployee(state);
         return "redirect:/parameters/states";
     }
 

@@ -27,7 +27,7 @@ public class StateService {
         stateRepository.deleteById(id);
     }
 
-    public void save(State state) {
+    public void saveEmployee(State state) {
         stateRepository.save(state);
     }
 }

@@ -4,6 +4,10 @@ import com.kindsonthegenius.fleetms.exceptions.ResourceNotFoundException;
 import com.kindsonthegenius.fleetms.parameters.models.Country;
 import com.kindsonthegenius.fleetms.parameters.repositories.CountryRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,7 +22,23 @@ public class CountryService {
         return countryRepository.findAll();
     }
 
-    public void save(Country country) {
+    public Page<Country> findPage(Integer pageNumber) {
+        Pageable pageable = PageRequest.of(pageNumber - 1, 5);
+        return countryRepository.findAll(pageable);
+    }
+
+    public List<Country> getByKeyword(String keyword) {
+        return countryRepository.findByKeyword(keyword);
+    }
+
+    public Page<Country> findAllWithSort(String field, String direction, int pageNumber) {
+        Sort sort = direction.equalsIgnoreCase(Sort.Direction.ASC.name()) ?
+                Sort.by(field).ascending() : Sort.by(field).descending();
+        Pageable pageable = PageRequest.of(pageNumber - 1, 5, sort);
+        return countryRepository.findAll(pageable);
+    }
+
+    public void saveCountry(Country country) {
         countryRepository.save(country);
     }
 

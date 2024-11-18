@@ -3,13 +3,12 @@ package com.kindsonthegenius.fleetms.parameters.controllers;
 import com.kindsonthegenius.fleetms.parameters.models.Country;
 import com.kindsonthegenius.fleetms.parameters.services.CountryService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @Controller
@@ -20,8 +19,9 @@ public class CountryController {
     private final CountryService countryService;
 
     @GetMapping
-    public String getAll(Model model) {
-        List<Country> countries = countryService.getAll();
+    public String getAll(@RequestParam(name = "keyword", defaultValue = "", required = false) String keyword,
+                         Model model) {
+        List<Country> countries = countryService.getByKeyword(keyword);
         model.addAttribute("countries", countries);
         return "parameters/country/countries";
     }
@@ -33,7 +33,7 @@ public class CountryController {
 
     @PostMapping
     public String save(Country country) {
-        countryService.save(country);
+        countryService.saveCountry(country);
         return "redirect:/parameters/countries";
     }
 
@@ -47,6 +47,7 @@ public class CountryController {
     @GetMapping("/{operation}/{id}")
     public String editCountry(@PathVariable("id") Integer id,
                               @PathVariable("operation") String operation,
+
                               Model model) {
         Country foundCountry = countryService.getById(id);
         model.addAttribute("country", foundCountry);
@@ -66,5 +67,40 @@ public class CountryController {
 //        return "parameters/country/countryDetails";
 //    }
 
+    @GetMapping("/page/{pageNumber}")
+    public String getOnePage(@PathVariable("pageNumber") Integer currentPage,
+                             Model model) {
+        Page<Country> page = countryService.findPage(currentPage);
+        int totalPages = page.getTotalPages();
+        long totalElements = page.getTotalElements();
+        List<Country> countries = page.getContent();
+        model.addAttribute("currentPage", currentPage);
+        model.addAttribute("totalPages", totalPages);
+        model.addAttribute("totalElements", totalElements);
+        model.addAttribute("countries", countries);
+        return "parameters/country/countries";
+    }
+
+    @GetMapping("/page/{pageNumber}/{field}")
+    public String getPageWithSort(@PathVariable("pageNumber") Integer currentPage,
+                                  @PathVariable("field") String field,
+                                  @PathParam("sortDir") String sortDir,
+
+                                  Model model) {
+        Page<Country> page = countryService.findAllWithSort(field, sortDir, currentPage);
+        List<Country> countries = page.getContent();
+        int totalPages = page.getTotalPages();
+        long totalItems = page.getTotalElements();
+
+
+        model.addAttribute("currentPage", currentPage);
+        model.addAttribute("totalPages", totalPages);
+        model.addAttribute("totalItems", totalItems);
+
+        model.addAttribute("sortDir", sortDir);
+        model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
+        model.addAttribute("countries", countries);
+        return "parameters/country/countries";
+    }
 
 }

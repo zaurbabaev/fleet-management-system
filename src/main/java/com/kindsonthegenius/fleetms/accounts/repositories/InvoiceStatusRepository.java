@@ -1,4 +1,8 @@
 package com.kindsonthegenius.fleetms.accounts.repositories;
 
-public class InvoiceStatusRepository {
+import com.kindsonthegenius.fleetms.accounts.models.InvoiceStatus;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface InvoiceStatusRepository extends JpaRepository<InvoiceStatus, Integer> {
+
 }

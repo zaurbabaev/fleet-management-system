@@ -3,7 +3,7 @@ package com.kindsonthegenius.fleetms.hr.models;
 
 import com.kindsonthegenius.fleetms.parameters.models.Country;
 import com.kindsonthegenius.fleetms.parameters.models.State;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;

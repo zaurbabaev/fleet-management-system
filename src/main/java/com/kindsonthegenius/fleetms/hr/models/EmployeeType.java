@@ -3,7 +3,7 @@ package com.kindsonthegenius.fleetms.hr.models;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.kindsonthegenius.fleetms.parameters.models.CommonObject;
-import jakarta.persistence.Entity;
+import javax.persistence.Entity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

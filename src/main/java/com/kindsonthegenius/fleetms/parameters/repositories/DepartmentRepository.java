@@ -1,4 +1,8 @@
 package com.kindsonthegenius.fleetms.parameters.repositories;
 
-public interface DepartmentRepository {
+import com.kindsonthegenius.fleetms.parameters.models.Department;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface DepartmentRepository extends JpaRepository<Department, Integer> {
+
 }

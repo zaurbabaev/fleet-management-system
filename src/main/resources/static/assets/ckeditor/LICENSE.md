@@ -141,24 +141,24 @@ you may at your option offer warranty protection in exchange for a fee.
    distribute such modifications or work under the terms of Section 1
    above, provided that you also meet all of these conditions:
 
-    a) You must cause the modified files to carry prominent notices
-    stating that you changed the files and the date of any change.
+   a) You must cause the modified files to carry prominent notices
+   stating that you changed the files and the date of any change.
 
-    b) You must cause any work that you distribute or publish, that in
-    whole or in part contains or is derived from the Program or any
-    part thereof, to be licensed as a whole at no charge to all third
-    parties under the terms of this License.
+   b) You must cause any work that you distribute or publish, that in
+   whole or in part contains or is derived from the Program or any
+   part thereof, to be licensed as a whole at no charge to all third
+   parties under the terms of this License.
 
-    c) If the modified program normally reads commands interactively
-    when run, you must cause it, when started running for such
-    interactive use in the most ordinary way, to print or display an
-    announcement including an appropriate copyright notice and a
-    notice that there is no warranty (or else, saying that you provide
-    a warranty) and that users may redistribute the program under
-    these conditions, and telling the user how to view a copy of this
-    License.  (Exception: if the Program itself is interactive but
-    does not normally print such an announcement, your work based on
-    the Program is not required to print an announcement.)
+   c) If the modified program normally reads commands interactively
+   when run, you must cause it, when started running for such
+   interactive use in the most ordinary way, to print or display an
+   announcement including an appropriate copyright notice and a
+   notice that there is no warranty (or else, saying that you provide
+   a warranty) and that users may redistribute the program under
+   these conditions, and telling the user how to view a copy of this
+   License.  (Exception: if the Program itself is interactive but
+   does not normally print such an announcement, your work based on
+   the Program is not required to print an announcement.)
 
 These requirements apply to the modified work as a whole. If
 identifiable sections of that work are not derived from the Program,
@@ -184,22 +184,22 @@ the scope of this License.
    under Section 2) in object code or executable form under the terms of
    Sections 1 and 2 above provided that you also do one of the following:
 
-    a) Accompany it with the complete corresponding machine-readable
-    source code, which must be distributed under the terms of Sections
-    1 and 2 above on a medium customarily used for software interchange; or,
+   a) Accompany it with the complete corresponding machine-readable
+   source code, which must be distributed under the terms of Sections
+   1 and 2 above on a medium customarily used for software interchange; or,
 
-    b) Accompany it with a written offer, valid for at least three
-    years, to give any third party, for a charge no more than your
-    cost of physically performing source distribution, a complete
-    machine-readable copy of the corresponding source code, to be
-    distributed under the terms of Sections 1 and 2 above on a medium
-    customarily used for software interchange; or,
+   b) Accompany it with a written offer, valid for at least three
+   years, to give any third party, for a charge no more than your
+   cost of physically performing source distribution, a complete
+   machine-readable copy of the corresponding source code, to be
+   distributed under the terms of Sections 1 and 2 above on a medium
+   customarily used for software interchange; or,
 
-    c) Accompany it with the information you received as to the offer
-    to distribute corresponding source code.  (This alternative is
-    allowed only for noncommercial distribution and only if you
-    received the program in object code or executable form with such
-    an offer, in accord with Subsection b above.)
+   c) Accompany it with the information you received as to the offer
+   to distribute corresponding source code.  (This alternative is
+   allowed only for noncommercial distribution and only if you
+   received the program in object code or executable form with such
+   an offer, in accord with Subsection b above.)
 
 The source code for a work means the preferred form of the work for
 making modifications to it. For an executable work, complete source
@@ -498,28 +498,28 @@ fee.
    distribute such modifications or work under the terms of Section 1
    above, provided that you also meet all of these conditions:
 
-    a) The modified work must itself be a software library.
+   a) The modified work must itself be a software library.
 
-    b) You must cause the files modified to carry prominent notices
-    stating that you changed the files and the date of any change.
+   b) You must cause the files modified to carry prominent notices
+   stating that you changed the files and the date of any change.
 
-    c) You must cause the whole of the work to be licensed at no
-    charge to all third parties under the terms of this License.
+   c) You must cause the whole of the work to be licensed at no
+   charge to all third parties under the terms of this License.
 
-    d) If a facility in the modified Library refers to a function or a
-    table of data to be supplied by an application program that uses
-    the facility, other than as an argument passed when the facility
-    is invoked, then you must make a good faith effort to ensure that,
-    in the event an application does not supply such function or
-    table, the facility still operates, and performs whatever part of
-    its purpose remains meaningful.
+   d) If a facility in the modified Library refers to a function or a
+   table of data to be supplied by an application program that uses
+   the facility, other than as an argument passed when the facility
+   is invoked, then you must make a good faith effort to ensure that,
+   in the event an application does not supply such function or
+   table, the facility still operates, and performs whatever part of
+   its purpose remains meaningful.
 
-    (For example, a function in a library to compute square roots has
-    a purpose that is entirely well-defined independent of the
-    application.  Therefore, Subsection 2d requires that any
-    application-supplied function or table used by this function must
-    be optional: if the application does not supply it, the square
-    root function must still compute square roots.)
+   (For example, a function in a library to compute square roots has
+   a purpose that is entirely well-defined independent of the
+   application. Therefore, Subsection 2d requires that any
+   application-supplied function or table used by this function must
+   be optional: if the application does not supply it, the square
+   root function must still compute square roots.)
 
 These requirements apply to the modified work as a whole. If
 identifiable sections of that work are not derived from the Library,
@@ -671,14 +671,14 @@ distribute.
    the Library and of the other library facilities is otherwise
    permitted, and provided that you do these two things:
 
-    a) Accompany the combined library with a copy of the same work
-    based on the Library, uncombined with any other library
-    facilities.  This must be distributed under the terms of the
-    Sections above.
+   a) Accompany the combined library with a copy of the same work
+   based on the Library, uncombined with any other library
+   facilities. This must be distributed under the terms of the
+   Sections above.
 
-    b) Give prominent notice with the combined library of the fact
-    that part of it is a work based on the Library, and explaining
-    where to find the accompanying uncombined form of the same work.
+   b) Give prominent notice with the combined library of the fact
+   that part of it is a work based on the Library, and explaining
+   where to find the accompanying uncombined form of the same work.
 
 8. You may not copy, modify, sublicense, link with, or distribute
    the Library except as expressly provided under this License. Any

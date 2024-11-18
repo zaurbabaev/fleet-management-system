@@ -1,31 +1,56 @@
-#*****************H2 DATABASE***************** http://localhost:8080/h2-console
+##*****************H2 DATABASE CONFIGURATION***************** http://localhost:8080/h2-console
+##spring:
+##  h2:
+##    console:
+##      enabled: true
+##  datasource:
+##    url: jdbc:h2:mem:fleet_db
+##  jpa:
+##    hibernate:
+##      ddl-auto: update
+##    defer-datasource-initialization: true  # Verilənlər bazasının ilkin yüklənməsinin gecikdirilməsi(Cədvəllər yaranır sonra İnsert olur)
+##  sql:
+##    init:
+##      platform: h2
+#
+##*****************PostgreSQL DATABASE CONFIGURATION*****************
 #spring:
-#  h2:
-#    console:
-#      enabled: true
 #  datasource:
-#    url: jdbc:h2:mem:fleet_db
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/fleet_db?currentSchema=fleet
+#    username: postgres
+#    password: postgres
 #  jpa:
 #    hibernate:
 #      ddl-auto: update
-#    defer-datasource-initialization: true  # Verilənlər bazasının ilkin yüklənməsinin gecikdirilməsi(Cədvəllər yaranır sonra İnsert olur)
+#    properties:
+#      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+#    show-sql: true
 #  sql:
 #    init:
-#      platform: h2
-
-#*****************PostgreSQL DATABASE*****************
-spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/fleet_db?currentSchema=fleet
-    username: postgres
-    password: postgres
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
-    show-sql: true
-  sql:
-    init:
-      mode: never
+#      mode: never
+#
+#
+#  #*****************Mailing Properties*****************
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username:${SPRING_MAIL_USERNAME}
+#    password:${SPRING_MAIL_PASSWORD}
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#        starttls:
+#          enable: true
+#
+#
+#site:
+#  base:
+#    url:
+#      https: http://localhost:8080
+#
+#ktg:
+#  secure:
+#    token:
+#      validity: 2800

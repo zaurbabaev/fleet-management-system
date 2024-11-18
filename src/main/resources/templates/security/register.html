@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" th:href="@{img/favicon.png}">
+
+    <title>Register New User</title>
+
+    <!-- Bootstrap CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link th:href="@{/css/bootstrap-theme.css}" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link th:href="@{/css/elegant-icons-style.css}" rel="stylesheet"/>
+    <link th:href="@{/css/font-awesome.css}" rel="stylesheet"/>
+    <!-- Custom styles -->
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link th:href="@{/css/style-responsive.css}" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+    <script th:src="@{/js/html5shiv.js}"></script>
+    <script th:src="@{/js/respond.min.js}"></script>
+    <![endif]-->
+
+</head>
+
+<body class="login-img3-body">
+
+<div class="container">
+
+    <form class="login-form" th:action="@{/usersAddNew}" method="post">
+        <div class="login-wrap">
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_profile"></i></span>
+                <input type="text" class="form-control" placeholder="Firstname" autofocus name="firstname" required>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_profile"></i></span>
+                <input type="text" class="form-control" placeholder="Lastname" autofocus name="lastname" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_mail"></i></span>
+                <input type="email" class="form-control" placeholder="Email" name="email" autofocus required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_profile"></i></span>
+                <input type="text" class="form-control" placeholder="Username" name="username" autofocus required>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <input type="password" class="form-control"
+                       placeholder="Password"
+                       id="password"
+                       name="password"
+                       title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                       onkeyup="onChange()"
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <input type="password"
+                       class="form-control"
+                       placeholder="Confirm Password"
+                       id="confirmPassword"
+                       name="confirm"
+                       onkeyup="onChange()"
+                       required>
+            </div>
+
+            <label class="checkbox">
+                <span><a th:href="@{/login}"> Login Page</a></span>
+                <span class="pull-right"> <a th:href="@{/forgot-password}"> Forgot Password?</a></span>
+            </label>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+        </div>
+    </form>
+    <div class="text-right">
+        <div class="credits">
+            Designed by <a href="https://kttpro.com/">KTTPRO</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function onChange() {
+        const password = document.querySelector('input[name=password]');
+        const confirm = document.querySelector('input[name=confirm]');
+        if (confirm.value === password.value) {
+            confirm.setCustomValidity('');
+        } else {
+            confirm.setCustomValidity('Passwords do not match');
+        }
+    }
+</script>
+
+
+<!-- javascripts -->
+<script th:src="@{/js/jquery.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+
+<script th:src="@{/js/register.js}"></script>
+
+</body>
+
+</html>

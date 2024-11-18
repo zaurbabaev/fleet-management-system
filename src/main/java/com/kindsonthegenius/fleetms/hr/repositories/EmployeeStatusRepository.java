@@ -1,4 +1,8 @@
 package com.kindsonthegenius.fleetms.hr.repositories;
 
-public interface EmployeeStatusRepository {
+import com.kindsonthegenius.fleetms.hr.models.EmployeeStatus;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmployeeStatusRepository extends JpaRepository<EmployeeStatus, Integer> {
+
 }

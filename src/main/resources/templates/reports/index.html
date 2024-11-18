@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{_layout}">
+      layout:decorate="_layout">
 
 <body>
 
-<!--main content start-->
 <div layout:fragment="content">
     <section class="wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header"><i class="fa-solid fa-list"></i><b style="color: #092f3d">REPORTS HOME</b>
-                </h3>
+                <h3 class="page-header"><i class="fa fa fa-bars"></i> Reports Home</h3>
                 <ol class="breadcrumb">
                     <li><i class="fa fa-home"></i><a href="/index">Home</a></li>
-                    <li><i class="fa fa-bars"></i><a href="/reports">Reports home</a></li>
-                    <li><i class="fa fa-square"></i>Reports home</li>
+                    <li><i class="fa fa-bars"></i><a href="/reports">Reports</a></li>
+                    <li><i class="fa fa-square-o"></i>Reports Home</li>
                 </ol>
             </div>
         </div>
@@ -28,12 +26,43 @@
                                 <h5 class="card-title"><h3><b>Accounts Reports</b></h3></h5>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional
                                     content.</p>
-                                <a href="/countries" class="btn btn-primary">Manage Accounts</a>
+                                <a href="/reports/accounts" class="btn btn-primary">View Accounts Reports</a>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
+            <div class="col-lg-4">
+                <section class="panel">
+                    <div class="panel-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><h3><b>Vehicles Reports</b></h3></h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="/reports/vehicles" class="btn btn-primary">View Vehicles Reports</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4">
+                <section class="panel">
+                    <div class="panel-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><h3><b>Helpdesk Reports</b></h3></h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="/reports/helpdesk" class="btn btn-primary">View Helpdesk Reports</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-lg-4">
                 <section class="panel">
                     <div class="panel-body">
@@ -42,7 +71,7 @@
                                 <h5 class="card-title"><h3><b>Vehicle Hires Reports</b></h3></h5>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional
                                     content.</p>
-                                <a href="/modules" class="btn btn-primary">Manage Vehicle Hires</a>
+                                <a href="/reports/hires" class="btn btn-primary">View Vehicle Hires Reports</a>
                             </div>
                         </div>
                     </div>
@@ -53,10 +82,24 @@
                     <div class="panel-body">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"><h3><b>Maintenance Reports</b></h3></h5>
+                                <h5 class="card-title"><h3><b>Vehicle Maintenance Reports</b></h3></h5>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional
                                     content.</p>
-                                <a href="/states" class="btn btn-primary">Manage Maintenance</a>
+                                <a href="/reports/maintenance" class="btn btn-primary">View Maintenance Reports </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4">
+                <section class="panel">
+                    <div class="panel-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><h3><b>Employees Count Reports</b></h3></h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="/reports/hr" class="btn btn-primary">View Maintenance Reports </a>
                             </div>
                         </div>
                     </div>
@@ -65,7 +108,6 @@
         </div>
     </section>
 </div>
-<!--main content end-->
 
 </body>
 </html>

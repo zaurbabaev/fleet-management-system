@@ -1,4 +1,8 @@
 package com.kindsonthegenius.fleetms.accounts.repositories;
 
-public class TransactionStatusRepository {
+import com.kindsonthegenius.fleetms.accounts.models.TransactionStatus;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TransactionStatusRepository extends JpaRepository<TransactionStatus, Integer> {
+
 }

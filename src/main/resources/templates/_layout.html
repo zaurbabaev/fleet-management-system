@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
 <head>
     <meta charset="utf-8">
@@ -280,20 +281,20 @@
                 <!-- alert notification end-->
                 <!-- user login dropdown start-->
                 <li class="dropdown">
-                    <!--                    <a sec:authorize="isAuthenticated()" data-toggle="dropdown" class="dropdown-toggle"-->
-                    <!--                       th:href="@{'img/photos/'+${#authentication.getPrincipal().getUsername()}+'.jpg'}">-->
-                    <!--                            <span class="profile-ava">-->
-                    <!--                                <img alt=""-->
-                    <!--                                     th:src="@{'img/photos/'+ ${#authentication.getPrincipal().getUsername()} +'.jpg'}"-->
-                    <!--                                     height="38" width="38">-->
-                    <!--                            </span>-->
-                    <!--                        <span class="username" sec:authentication="name">User</span>-->
-                    <!--                        <b class="caret"></b>-->
+                    <a sec:authorize="isAuthenticated()" data-toggle="dropdown" class="dropdown-toggle"
+                       th:href="@{'img/photos/'+${#authentication.getPrincipal().getUsername()}+'.jpg'}">
+                                                <span class="profile-ava">
+                                                    <img alt=""
+                                                         th:src="@{'img/photos/'+ ${#authentication.getPrincipal().getUsername()} +'.jpg'}"
+                                                         height="38" width="38">
+                                                </span>
+                        <span class="username" sec:authentication="name">User</span>
+                        <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu extended logout">
                         <div class="log-arrow-up"></div>
                         <li class="eborder-top">
-                            <a th:href="@{/employee/profile}"><i class="icon_profile"></i> My Profile</a>
+                            <a th:href="@{/hr/employees/profile}"><i class="icon_profile"></i> My Profile</a>
                         </li>
                         <li>
                             <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
